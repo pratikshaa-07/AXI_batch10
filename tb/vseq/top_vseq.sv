@@ -7,7 +7,7 @@
 class top_vseqr extends uvm_sequencer;
   `uvm_component_utils(top_vseqr)
 
-  cpu_sequencer cpu_sqr_h;   // set by top_env.connect_phase
+   sequencer cpu_sqr_h;   // set by top_env.connect_phase
 
   function new(string name = "top_vseqr", uvm_component parent = null);
     super.new(name, parent);
