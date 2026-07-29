@@ -14,7 +14,7 @@ class passive_monitor extends uvm_monitor;
  
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if (!uvm_config_db#(virtual inf.MON)::get(this, "", "vif", vif))
+    if (!uvm_config_db#(virtual inf)::get(this, "", "vif", vif))
       `uvm_fatal("PASS_MON", "Unable to access Interface");
   endfunction
  
