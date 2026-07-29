@@ -18,7 +18,7 @@ class single_seq_test extends base_test;
     seq = cpu_write_seq::type_id::create("seq");
     
     //change it
-    seq.start(env_h.cpu_env_h.cpu_agt_h.cpu_seqr_h);
+    seq.start(tenv.env.act_agt.seqr);
 
     phase.drop_objection(this);
   endtask
