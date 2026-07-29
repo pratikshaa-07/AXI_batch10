@@ -1,19 +1,19 @@
-class test extends uvm_test;
- `uvm_component_utils(test)
+class base_test extends uvm_test;
+	`uvm_component_utils(base_test)
 
   environment env;
-  sequence seq1;
+  sequence seq;
 
 
  function new(string name="test", uvm_component parent);
   super.new(name,parent);
- endfunction : new
+ endfunction 
 
 
  function void build_phase(uvm_phase phase);
   super.build_phase(phase);
   env = environment::type_id::create("env", this);
-  seq1 = sequence::type_id::create("seq1");
+  seq = sequence::type_id::create("seq");
  endfunction 
 
  function void end_of_elaboration();
@@ -23,9 +23,10 @@ class test extends uvm_test;
 
  task run_phase(uvm_phase phase);
   phase.raise_objection(this);
-  seq1.start(env.agent.seqr);
-  phase.drop_objection(this);
-
+  if (!seq.randomize() with { num_txns == 10; })
+      `uvm_error(get_type_name(), "randomize failed")
+ seq.start(env.vseqr);
+ phase.drop_objection(this);
  endtask  
     
 endclass
