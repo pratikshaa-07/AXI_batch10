@@ -1,8 +1,8 @@
 class environment extends uvm_env;
-  active_agent a_agt;
-  passive_agent p_agt;
+  active_agent act_agt;
+  passive_agent pas_agt;
   scoreboard scb;
-  subscriber sub;
+  //subscriber sub;
 
   `uvm_component_utils(environment)
   
@@ -12,15 +12,19 @@ class environment extends uvm_env;
   
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    a_agt=passive_agent::type_id::create("a_agt",this);
-    p_agt=active_agent::type_id::create("p_agt",this);
+    a_agt=passive_agent::type_id::create("act_agt",this);
+    p_agt=active_agent::type_id::create("pas_agt",this);
     scb=scoreboard::type_id::create("scb",this);
-    sub=subscriber::type_id::create("sub",this); 
+    //sub=subscriber::type_id::create("sub",this); 
   endfunction
   
   virtual function void connect_phase(uvm_phase phase);    
-    agt.monitor.mon_port.connect(scb.sco_port.analysis_export);
-    agt.monitor.mon_port.connect(sub.cov_port.analysis_export);
+    act_agt.monitor.send_port.connect(scb.act_fifo.analysis_export);
+    //act_agt.monitor.mon_port.connect(sub.cov_port.analysis_export);
+    
+    pas_agt.monitor.send_port.connect(scb.pas_fifo.analysis_export);
+    //pas_agt.monitor.mon_port.connect(sub.cov_port.analysis_export);
+    
     endfunction
 endclass
       
