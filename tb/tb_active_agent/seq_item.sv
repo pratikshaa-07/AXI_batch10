@@ -1,6 +1,4 @@
-
 class seq_item extends uvm_sequence_item;
-
   rand  bit [7:0]   sop;
   randc bit [3:0]   txn_id;
   rand  bit [31:0]  addr;
@@ -10,15 +8,16 @@ class seq_item extends uvm_sequence_item;
   rand  bit [1:0]   lock;
   rand  bit [1:0]   cache;
   rand  bit [2:0]   prot;
-  rand  bit [3:0]   strobe;     
-  rand  bit [7:0]   data[];
+  rand  bit [3:0]   strobe;      // fixed 4 bits: one bit per data byte, max 4 bytes
+  rand  bit [7:0]   data[];      // dynamic: 1 byte (read) or up to 4 bytes (write)
   rand  bit [7:0]   eop;
-  rand  bit         mode;
-  rand  bit rd_en;
-  rand  bit wr_en;
-  
-  bit   [127:0]     rd_data;
-  bit   [127:0]     wr_data;
+  rand  bit         mode;        // mode=1 write, mode=0 read
+  rand  bit         rd_en;
+  rand  bit         wr_en;
+
+  bit   [127:0]     rd_data;     // raw beat captured by monitor (not packed)
+  bit   [127:0]     wr_data;     // raw beat captured by monitor (not packed)
+
   function new(string name="");
     super.new(name);
   endfunction
@@ -36,7 +35,6 @@ class seq_item extends uvm_sequence_item;
     `uvm_field_int(strobe, UVM_ALL_ON)
     `uvm_field_int(data,   UVM_ALL_ON)
     `uvm_field_int(eop,    UVM_ALL_ON)
-    `uvm_field_int(resp_data, UVM_ALL_ON)   // response-only, exclude from pack
   `uvm_object_utils_end
 
   // ---------------- constraints ----------------
@@ -47,7 +45,7 @@ class seq_item extends uvm_sequence_item;
     sop == 8'b10101010;
   }
   constraint eop_val {
-    eop == 8'b01010011;
+    eop == 8'01010011;
   }
   constraint size_val {
     size inside {[0:4]};
@@ -55,34 +53,33 @@ class seq_item extends uvm_sequence_item;
   constraint len_val {
     len inside {[0:15]};
   }
+
+  // data size formula only applies to write packets; capped at 4 bytes (32 bits max)
   constraint data_size {
     if (mode == 1)
       data.size() == ((len+1)*(1<<size));
     else
       data.size() == 1;
   }
-  
- //mode =1 write    mode=0 read 
-  constraint strobe_size {
-    if (mode == 0)
-      strobe.size() == data.size();
-    else begin
-      strobe.size() == 1;
-      strobe[0] == 0;
-    end
-  }
+  // constraint data_max {
+  //   if (mode == 1)
+  //     (len+1)*(1<<size) <= 4;   // hard cap: max 32 bits of data
+  // }
+
+  // read packet: single data byte must be 0
   constraint rd_pkt_data {
-    if (mode == 1)
-      data[0] == 8'h00;
-  }
-  constraint wrt_pkt_data {
     if (mode == 0)
+    {
+      data[0] == 8'h00;
+      strobe =='b0;
+    }
+  }
+  // write packet: no data byte may collide with sop/eop
+  constraint wrt_pkt_data {
+    if (mode == 1)
       foreach (data[i]) {
         data[i] != sop;
         data[i] != eop;
       }
   }
-
 endclass
-  
-//mode =1 write    mode=0 read 
