@@ -45,7 +45,7 @@ class seq_item extends uvm_sequence_item;
     sop == 8'b10101010;
   }
   constraint eop_val {
-    eop == 8'01010011;
+    eop == 8'b01010011;
   }
   constraint size_val {
     size inside {[0:4]};

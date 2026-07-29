@@ -22,16 +22,16 @@ package cpu_tb_pkg;
   `include "tb_active_agent/sequencer.sv"
   `include "tb_active_agent/driver.sv"
   `include "tb_active_agent/active_monitor.sv"
-  `include "cpu_agent/active_agent.sv"
-  `include "cpu_agent/write_seq.sv"
-  `include "cpu_agent/read_seq.sv"   // ADDED: cpu-side read sequence
+  `include "tb_active_agent/active_agent.sv"
+  `include "tb_active_agent/write_seq.sv"
+  `include "tb_active_agent/read_seq.sv"   // ADDED: cpu-side read sequence
 
   `include "tb_passive_agent/passive_agent.sv"
   `include "tb_passive_agent/passive_monitor.sv"
 
   `include "env/scoreboard.sv"
   `include "env/environment.sv"
-  `include "env/axi_vip_env.sv"
+  `include "env/axi4_vip_env.sv"
 
   `include "vseq/top_vseq.sv"
   // ADDED: the 2 virtual sequences that run the cpu sequence and the AXI4
