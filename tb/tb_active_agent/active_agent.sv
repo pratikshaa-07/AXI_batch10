@@ -1,4 +1,4 @@
-class agent extends uvm_agent;
+class active_agent extends uvm_agent;
   driver drv;
   active_monitor mon;
   sequencer seqr;
