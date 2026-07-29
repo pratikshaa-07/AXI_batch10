@@ -1,4 +1,3 @@
-`include "define.sv"
 `include "uvm_macros.svh"
 
 interface inf(input bit clk, input bit rst);
