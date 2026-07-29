@@ -1,7 +1,7 @@
 class base_test extends uvm_test;
 	`uvm_component_utils(base_test)
 
-  top_env env;
+  top_env tenv;
   sequence seq;
 
 
@@ -11,9 +11,9 @@ class base_test extends uvm_test;
 
 
  function void build_phase(uvm_phase phase);
-  super.build_phase(phase);
-  env = environment::type_id::create("env", this);
-  seq = sequence::type_id::create("seq");
+	 super.build_phase(phase);
+	 tenv = environment::type_id::create("tenv", this);
+	 seq = sequence::type_id::create("seq");
  endfunction 
 
  function void end_of_elaboration();
@@ -25,7 +25,7 @@ class base_test extends uvm_test;
   phase.raise_objection(this);
   if (!seq.randomize() with { num_txns == 10; })
       `uvm_error(get_type_name(), "randomize failed")
- seq.start(env.vseqr);
+	  seq.start(tenv.vseqr);
  phase.drop_objection(this);
  endtask  
     
