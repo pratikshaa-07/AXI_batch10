@@ -19,8 +19,11 @@ class scoreboard extends uvm_scoreboard;
       seq_item wrt,rd;
       wrt = seq_item::type_id::create("wrt");
       rd  = seq_item::type_id::create("rd");
+      fork
       wrt_fifo.get(wrt);
       rd_fifo.get(rd);
+  join
+  end
   endtask
 
 endclass

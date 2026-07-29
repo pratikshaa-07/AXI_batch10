@@ -22,7 +22,7 @@ class passive_monitor extends uvm_monitor;
     repeat(4) @(vif.mon_cb);
     forever begin
       tr = seq_item::type_id::create("tr");
-      tr.rd_an   = vif.mon_cb.rd_en;
+      tr.rd_en   = vif.mon_cb.rd_en;
       tr.rd_data = vif.mon_cb.rd_data;
       send_port.write(tr);
       @(vif.mon_cb);

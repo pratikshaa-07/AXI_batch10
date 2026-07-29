@@ -3,20 +3,22 @@ class active_agent extends uvm_agent;
   active_monitor mon;
   sequencer seqr;
 
-  `uvm_component_utils(agent)
+  `uvm_component_utils(active_agent)
 
-  function new(string name="agent",uvm_component parent);
+  function new(string name="",uvm_component parent);
     super.new(name,parent);
   endfunction
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
 
-    if(get_is_active()== UVM_ACTIVE)
+    /*if(get_is_active()== UVM_ACTIVE)
       begin
         drv=driver::type_id::create("driver",this);
         seqr=sequencer::type_id::create("seqr",this);
-      end
+      end*/
+      drv=driver::type_id::create("driver",this);
+      seqr=sequencer::type_id::create("seqr",this);
      mon=active_monitor::type_id::create("mon",this);
   endfunction
 

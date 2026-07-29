@@ -1,10 +1,10 @@
-class wrt_seq extends uvm_sequence #(cpu_tx);
+class cpu_write_seq extends uvm_sequence #(seq_item);
 
   `uvm_object_utils(cpu_write_seq)
 
   seq_item req;
 
-  function new(string name="cpu_write_seq");
+  function new(string name="");
     super.new(name);
   endfunction
 
@@ -15,10 +15,10 @@ class wrt_seq extends uvm_sequence #(cpu_tx);
     start_item(req);
 
     assert(req.randomize() with {
-      mode ==  0;
+      mode ==  1;
       wr_en == 1;
       rd_en == 0;
-      strobe == 4'b1111;
+      //strobe == 4'b1111;
     });
 
     finish_item(req);

@@ -26,8 +26,8 @@ package cpu_tb_pkg;
   `include "tb_active_agent/write_seq.sv"
   `include "tb_active_agent/read_seq.sv"   // ADDED: cpu-side read sequence
 
-  `include "tb_passive_agent/passive_agent.sv"
   `include "tb_passive_agent/passive_monitor.sv"
+  `include "tb_passive_agent/passive_agent.sv"
 
   `include "env/scoreboard.sv"
   `include "env/environment.sv"

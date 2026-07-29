@@ -10,7 +10,7 @@ class cpu_read_seq extends uvm_sequence #(seq_item);
 
   `uvm_object_utils(cpu_read_seq)
 
-  cpu_tx req;
+  seq_item req;
 
   function new(string name = "");
     super.new(name);
@@ -26,6 +26,7 @@ class cpu_read_seq extends uvm_sequence #(seq_item);
       mode     == 0;
       wr_en    == 0;
       rd_en    == 1;
+      strobe   == 4'b1111;
     });
 
     finish_item(req);
