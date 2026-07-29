@@ -19,10 +19,10 @@ class environment extends uvm_env;
   endfunction
   
   virtual function void connect_phase(uvm_phase phase);    
-    act_agt.monitor.send_port.connect(scb.act_fifo.analysis_export);
+    act_agt.monitor.send_port.connect(scb.wrt_fifo.analysis_export);
     //act_agt.monitor.mon_port.connect(sub.cov_port.analysis_export);
     
-    pas_agt.monitor.send_port.connect(scb.pas_fifo.analysis_export);
+    pas_agt.monitor.send_port.connect(scb.rd_fifo.analysis_export);
     //pas_agt.monitor.mon_port.connect(sub.cov_port.analysis_export);
     
     endfunction
