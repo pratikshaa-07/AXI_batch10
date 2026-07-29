@@ -4,7 +4,7 @@
 // matching the vendor's own axi4_master_pkg.sv / axi4_slave_pkg.sv convention.
 // Needs axi4_globals_pkg and axi4_slave_pkg compiled/imported before this.
 //--------------------------------------------------------------------------------------------
-package cpu_tb_pkg;
+package tb_pkg;
 
   import uvm_pkg::*;
   `include "uvm_macros.svh"
