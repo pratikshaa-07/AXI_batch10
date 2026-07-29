@@ -8,7 +8,7 @@ class top_env extends uvm_env;
 
   `uvm_component_utils(top_env)
 
-  environment  cpu_env;
+  environment  env;
   axi_vip_env  axi_vip_env_h;
   top_vseqr    vseqr_h;
 
@@ -18,14 +18,14 @@ class top_env extends uvm_env;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    cpu_env       =   env::type_id::create("cpu_env", this);
+    env       = environment::type_id::create("env", this);
     axi_vip_env_h = axi_vip_env::type_id::create("axi_vip_env_h", this);
     vseqr_h       = top_vseqr::type_id::create("vseqr_h", this);
   endfunction
 
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
-    vseqr_h.cpu_sqr_h = cpu_env_h.cpu_agt_h.cpu_seqr_h;
+    vseqr_h.sqr_h = env.act_agt.seqr;
   endfunction
 
 endclass
