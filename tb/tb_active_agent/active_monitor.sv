@@ -2,13 +2,13 @@ class active_monitor extends uvm_monitor;
   `uvm_component_utils(active_monitor)
  
   virtual inf.MON vif;
-  uvm_analysis_port #(seq_item) act_port;
+  uvm_analysis_port #(seq_item) send_port;
  
   seq_item tr;
  
   function new(string name = "", uvm_component parent);
     super.new(name, parent);
-    send_port = new("act_port", this);
+    send_port = new("send_port", this);
   endfunction
  
   function void build_phase(uvm_phase phase);
@@ -23,7 +23,7 @@ class active_monitor extends uvm_monitor;
       tr = seq_item::type_id::create("tr");
       tr.wr_en   = vif.mon_cb.wr_en;
       tr.wr_data = vif.mon_cb.wr_data;
-      act_port.write(tr);
+      send_port.write(tr);
       @(vif.mon_cb);
     end
   endtask
