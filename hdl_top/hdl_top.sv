@@ -48,7 +48,7 @@ module hdl_top;
   end
 
   // Variable : intf
-  inf cpu_inf(clk.(aclk),.rst(aresetn));
+  inf cpu_inf(.clk(aclk),.rst(aresetn));
   // axi4 Interface Instantiation
   axi4_if intf(.aclk(aclk),.aresetn(aresetn));
 
