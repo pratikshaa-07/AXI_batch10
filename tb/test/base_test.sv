@@ -10,7 +10,7 @@ class base_test extends uvm_test;
 
  function void build_phase(uvm_phase phase);
 	 super.build_phase(phase);
-	 tenv = environment::type_id::create("tenv", this);
+	 tenv = top_env::type_id::create("tenv", this);
 	 // seq = sequence::type_id::create("seq");
  endfunction 
 
