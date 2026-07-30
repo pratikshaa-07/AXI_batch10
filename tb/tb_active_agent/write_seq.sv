@@ -18,8 +18,8 @@ class cpu_write_seq extends uvm_sequence #(seq_item);
     //   mode ==  1;
     //   //strobe == 4'b1111;
     // });
-    if (!req.randomize() with { mode == 1; })
-      `uvm_fatal("CPU_WR_SEQ", "Randomization failed")
+ if (!req.randomize() with { mode == 1; wr_en == 1; rd_en == 0; })
+  `uvm_fatal("CPU_WR_SEQ", "Randomization failed")
 
     finish_item(req);
 
