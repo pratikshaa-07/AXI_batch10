@@ -132,6 +132,7 @@ class driver extends uvm_driver #(seq_item);
           idx++;
         end
     vif.drv_cb.wr_data <= beat;
+    `uvm_info("DRV",$sformatf("Beat =%0d ",beat),UVM_LOW)
     @(vif.drv_cb);
   end
 

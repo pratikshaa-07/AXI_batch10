@@ -23,6 +23,7 @@ class active_monitor extends uvm_monitor;
       tr = seq_item::type_id::create("tr");
       tr.wr_en   = vif.mon_cb.wr_en;
       tr.wr_data = vif.mon_cb.wr_data;
+      `uvm_info("WRT_MON",$sformatf("wr_en=%0d wr_data=%0d",tr.wr_en,tr.wr_data),UVM_LOW)
       send_port.write(tr);
       @(vif.mon_cb);
     end
