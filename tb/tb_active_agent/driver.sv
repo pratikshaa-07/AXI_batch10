@@ -93,21 +93,24 @@ class driver extends uvm_driver #(seq_item);
     `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
     
     temp = {>>{tx.prot}};     stream = {stream,temp};
-    `uvm_info("DRV",$sformatf("sop = %0b",tx.port),UVM_LOW)
+    `uvm_info("DRV",$sformatf("prot = %0b",tx.prot),UVM_LOW)
     `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
     
     temp = {>>{tx.strobe}};      stream = {stream,temp};
-    `uvm_info("DRV",$sformatf("sop = %0b",tx.sop),UVM_LOW)
+    `uvm_info("DRV",$sformatf("strobe = %0b",tx.strobe),UVM_LOW)
     `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
     
     foreach (tx.data[i])
     begin
       temp = {>>{tx.data[i]}};
       stream = {stream,temp};
+      `uvm_info("DRV",$sformatf("data = %0b",tx.data[i]),UVM_LOW)
+      `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
     end
 
-    temp = {>>{tx.eop}};
-    stream = {stream,temp};
+    temp = {>>{tx.eop}}; stream = {stream,temp};
+    `uvm_info("DRV",$sformatf("eop = %0b",tx.eop),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
   endfunction
 
   task write_task();
