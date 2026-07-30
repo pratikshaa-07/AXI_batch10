@@ -67,6 +67,8 @@ class seq_item extends uvm_sequence_item;
   // }
 
   // read packet: single data byte must be 0
+  constraint solve_order { solve len, size before data; }
+  
   constraint rd_pkt_data {
     if (mode == 0)
     {
