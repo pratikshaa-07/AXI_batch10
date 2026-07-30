@@ -78,8 +78,7 @@ class driver extends uvm_driver #(seq_item);
 
     temp = {>>{tx.prot}};     stream = {stream,temp};
 
-    foreach (tx.strobe[i])
-      stream.push_back(tx.strobe[i]);
+    temp = {>>{tx.strobe}};      stream = {stream,temp};
 
     foreach (tx.data[i])
     begin
