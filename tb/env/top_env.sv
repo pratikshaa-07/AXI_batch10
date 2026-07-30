@@ -25,7 +25,7 @@ class top_env extends uvm_env;
 
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
-    vseqr_h.sqr_h = env.act_agt.seqr;
+    vseqr_h.cpu_sqr_h = env.act_agt.seqr;
   endfunction
 
 endclass
