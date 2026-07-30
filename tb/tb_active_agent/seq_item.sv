@@ -33,7 +33,7 @@ class seq_item extends uvm_sequence_item;
     `uvm_field_int(cache,  UVM_ALL_ON)
     `uvm_field_int(prot,   UVM_ALL_ON)
     `uvm_field_int(strobe, UVM_ALL_ON)
-    `uvm_field_int(data,   UVM_ALL_ON)
+    `uvm_field_array_int(data,   UVM_ALL_ON)
     `uvm_field_int(eop,    UVM_ALL_ON)
   `uvm_object_utils_end
 

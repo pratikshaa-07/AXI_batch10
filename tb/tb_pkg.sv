@@ -46,4 +46,4 @@ package tb_pkg;
   `include "test/axi4_virtual_write_test.sv"
   `include "test/axi4_virtual_read_test.sv"
 
-endpackage : cpu_tb_pkg
+endpackage : tb_pkg
