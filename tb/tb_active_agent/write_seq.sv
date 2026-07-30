@@ -14,10 +14,12 @@ class cpu_write_seq extends uvm_sequence #(seq_item);
 
     start_item(req);
 
-    assert(req.randomize() with {
-      mode ==  1;
-      //strobe == 4'b1111;
-    });
+    // assert(req.randomize() with {
+    //   mode ==  1;
+    //   //strobe == 4'b1111;
+    // });
+    if (!req.randomize() with { mode == 1; })
+      `uvm_fatal("CPU_WR_SEQ", "Randomization failed")
 
     finish_item(req);
 
