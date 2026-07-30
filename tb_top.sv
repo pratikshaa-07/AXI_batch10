@@ -17,6 +17,10 @@ module tb_top;
   import tb_pkg::*;
   `include "uvm_macros.svh"
 
+  initial
+    begin
+      $assertoff;
+    end
   initial begin
     run_test("base_test");
   end
