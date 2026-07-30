@@ -61,25 +61,45 @@ class driver extends uvm_driver #(seq_item);
     stream = {};
 
     temp = {>>{tx.sop}};      stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("sop = %0b",tx.sop),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.txn_id}};   stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("txn_id = %0d",tx.txn_id),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.addr}};     stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("addr = %0h",tx.addr),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.len}};      stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("len = %0d",tx.len),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.size}};     stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("size = %0d",tx.size),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.burst}};    stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("burst = %0d",tx.burst),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.lock}};     stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("lock = %0d",tx.lock),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.cache}};    stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("sop = %0b",tx.cache),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.prot}};     stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("sop = %0b",tx.port),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     temp = {>>{tx.strobe}};      stream = {stream,temp};
-
+    `uvm_info("DRV",$sformatf("sop = %0b",tx.sop),UVM_LOW)
+    `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
+    
     foreach (tx.data[i])
     begin
       temp = {>>{tx.data[i]}};
