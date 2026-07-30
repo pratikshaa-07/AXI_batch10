@@ -57,9 +57,13 @@ class seq_item extends uvm_sequence_item;
   // data size formula only applies to write packets; capped at 4 bytes (32 bits max)
   constraint data_size {
     if (mode == 1)
+    {
       data.size() == ((len+1)*(1<<size));
+    }
     else
+    {
       data.size() == 1;
+    }
   }
   // constraint data_max {
   //   if (mode == 1)
