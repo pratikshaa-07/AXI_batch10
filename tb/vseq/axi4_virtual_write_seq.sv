@@ -49,10 +49,10 @@ class axi4_virtual_write_seq extends uvm_sequence;
         repeat (num_txns) begin
           cpu_wr_seq = cpu_write_seq::type_id::create("cpu_wr_seq");
           cpu_wr_seq.start(p_sequencer.cpu_sqr_h);
-          #500; //wait for a while
         end
       end
     join_any
+    #500; //wait for a while
     disable fork;
   endtask
 endclass
