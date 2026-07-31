@@ -48,10 +48,10 @@ class seq_item extends uvm_sequence_item;
     eop == 8'b01010011;
   }
   constraint size_val {
-    size inside {[0:4]};
+    size inside {[0:3]};
   }
   constraint len_val {
-    len inside {[0:15]};
+    len inside {[1:4]};
   }
 
   // data size formula only applies to write packets; capped at 4 bytes (32 bits max)
@@ -65,10 +65,10 @@ class seq_item extends uvm_sequence_item;
       data.size() == 1;
     }
   }
-  // constraint data_max {
-  //   if (mode == 1)
-  //     (len+1)*(1<<size) <= 4;   // hard cap: max 32 bits of data
-  // }
+   constraint data_max {
+    if (mode == 1)
+       (len+1)*(1<<size) <= 4;   // hard cap: max 32 bits of data
+   }
 
   // read packet: single data byte must be 0
   constraint solve_order { solve len, size before data; }

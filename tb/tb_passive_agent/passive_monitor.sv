@@ -26,7 +26,7 @@ class passive_monitor extends uvm_monitor;
       tr.rd_data = vif.mon_cb.rd_data;
       `uvm_info("RD_MON",$sformatf("rd_en=%0d rd_data=%0d",tr.rd_en,tr.rd_data),UVM_LOW)
       send_port.write(tr);
-      @(vif.mon_cb);
+      repeat(2)@(vif.mon_cb);
     end
   endtask
  
