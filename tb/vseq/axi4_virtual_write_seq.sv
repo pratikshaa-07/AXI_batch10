@@ -52,7 +52,7 @@ class axi4_virtual_write_seq extends uvm_sequence;
         end
       end
     join_any
-    #500; //wait for a while
+    //#500; //wait for a while
     disable fork;
   endtask
 endclass
