@@ -141,7 +141,7 @@ class driver extends uvm_driver #(seq_item);
     @(vif.drv_cb);
   end
   vif.drv_cb.wr_en <= 1'b0;
-
+  vif.drv_cb.data<='b0;
 endtask
 
 
