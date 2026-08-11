@@ -1,5 +1,5 @@
 # vsim -c tb_top hdl_top -do "run -all; quit" "+UVM_TESTNAME=axi4_virtual_write_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
-# Start time: 09:03:09 on Jul 31,2026
+# Start time: 12:00:01 on Aug 11,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Warning: rtl/decoder.v(370): (vopt-2241) Connection width does not match width of port 'bresp'. The port definition is at: rtl/write_response_handler.v(9).
 # ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'write_data'. The port definition is at: rtl/decoder.v(25).
@@ -551,37 +551,13 @@
 # UVM_INFO tb/tb_active_agent/driver.sv(140) @ 410000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226984813228144360310027114232137383936 
 # UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 430000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
 # UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 430000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 470000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 470000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 510000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 510000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 550000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 550000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 590000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 590000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 630000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 630000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 670000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 670000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 710000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 710000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 750000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 750000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 790000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 790000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 830000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 830000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 870000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 870000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 910000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 910000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228144360310027114232137383936
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 950000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 950000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 15.88 %
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 450000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 450000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 15.88 %
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  189
+# UVM_INFO :  165
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
@@ -593,7 +569,7 @@
 # [DEBUG_SLAVE_WRITE_ADDR_PROXY]     2
 # [DRV]   110
 # [Questa UVM]     2
-# [RD_MON]    22
+# [RD_MON]    10
 # [RNTST]     1
 # [SLAVE_ASSERTIONS]     1
 # [SLAVE_DEBUG]     1
@@ -602,13 +578,13 @@
 # [SLAVE_STATUS_CHECK]     6
 # [TEST_DONE]     1
 # [UVMTOP]     1
-# [WRT_MON]    22
+# [WRT_MON]    10
 # [axi4 slave agent bfm]     1
 # [axi4 slave driver bfm]     1
 # [axi4 slave monitor bfm]     1
 # [axi4_slave_coverage]     1
 # [axi4_slave_driver_proxy]     1
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 950 ns  Iteration: 59  Instance: /tb_top
-# End time: 09:03:13 on Jul 31,2026, Elapsed time: 0:00:04
+#    Time: 450 ns  Iteration: 68  Instance: /tb_top
+# End time: 12:00:04 on Aug 11,2026, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 48
