@@ -65,10 +65,10 @@ class seq_item extends uvm_sequence_item;
       data.size() == 1;
     }
   }
-   constraint data_max {
+  /* constraint data_max {
     if (mode == 1)
        (len+1)*(1<<size) <= 4;   // hard cap: max 32 bits of data
-   }
+   }*/
 
   // read packet: single data byte must be 0
   constraint solve_order { solve len, size before data; }
