@@ -51,7 +51,7 @@ class seq_item extends uvm_sequence_item;
     size inside {[0:3]};
   }
   constraint len_val {
-    len inside {[1:4]};
+    len inside {[0:4]};
   }
 
   // data size formula only applies to write packets; capped at 4 bytes (32 bits max)
