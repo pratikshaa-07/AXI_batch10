@@ -4,6 +4,9 @@ class scoreboard extends uvm_scoreboard;
   uvm_tlm_analysis_fifo #(seq_item) wrt_fifo;   // from write-fifo monitor
   uvm_tlm_analysis_fifo #(seq_item) rd_fifo;   // from read-fifo monitor
 
+  //assosiative array for storing the wrt packet
+  bit[31:0]array[seq_item];
+
   function new(string name="scoreboard", uvm_component parent=null);
     super.new(name, parent);
   endfunction
@@ -16,14 +19,34 @@ class scoreboard extends uvm_scoreboard;
 
   task run_phase(uvm_phase phase);
     forever begin
-      seq_item wrt,rd;
-      wrt = seq_item::type_id::create("wrt");
-      rd  = seq_item::type_id::create("rd");
+        seq_item wrt,rd;
+        wrt = seq_item::type_id::create("wrt");
+        rd  = seq_item::type_id::create("rd");
       fork
-      wrt_fifo.get(wrt);
-      rd_fifo.get(rd);
-  join
+          begin
+              wrt_fifo.get(wrt);
+              wrt_task();
+          end
+          begin
+              rd_fifo.get(rd);
+              rd_task();
+          end
+     join
   end
+  
   endtask
 
+  task wrt_task();
+     /* if(wrt.wr_en==0)
+      begin
+          `uvm_info("SCB","wr_en is zero",UVM_LOW)
+      end
+      else
+      begin
+          `uvm_info("SCB","Inside the wr_en=1 loop",UVM_LOW)
+      end*/
+  endtask
+
+  task rd_task();
+  endtask
 endclass
