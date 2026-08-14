@@ -19,13 +19,6 @@ module hdl_top;
   bit aresetn;
 
   //-------------------------------------------------------
-  // Display statement for HDL_TOP
-  //-------------------------------------------------------
-  initial begin
-    $display("HDL_TOP");
-  end
-
-  //-------------------------------------------------------
   // System Clock Generation
   //-------------------------------------------------------
   initial begin
@@ -46,16 +39,18 @@ module hdl_top;
     end
     aresetn = 1'b1;
   end
+  
+  initial begin
+    $dumpfile("waveform.vcd");      // name of the VCD file
+    $dumpvars(0, hdl_top);    // dump variables from the testbench top
+  end
 
   // Variable : intf
   inf cpu_inf(.clk(aclk),.rst(aresetn));
   // axi4 Interface Instantiation
-  axi4_if intf(.aclk(aclk),.aresetn(aresetn));
-
-  initial begin
-    uvm_config_db#(virtual inf)::set(null, "*", "vif", cpu_inf);
-  end
-
+  axi4_if intf(.aclk(aclk),
+               .aresetn(aresetn));
+               
   //-------------------------------------------------------
   // AXI4  No of Master and Slaves Agent Instantiation
   //-------------------------------------------------------
@@ -71,12 +66,11 @@ module hdl_top;
     end
   endgenerate
 
-  //-------------------------------------------------------
-  // DUT Instantiation (NEW) - Top_Module_AXI4 is the real AXI4 master.
-  // FIFO side -> cpu_intf, AXI side -> intf (same instance the slave
-  // VIP is bound to above).
-  //-------------------------------------------------------
-  Top_Module_AXI4 dut (
+  initial begin
+    uvm_config_db#(virtual inf)::set(null, "*", "vif", cpu_inf);
+  end
+
+ Top_Module_AXI4 dut (
     .clk      (aclk),
     .rstn     (aresetn),
     .ACLK     (aclk),
@@ -140,4 +134,3 @@ module hdl_top;
 endmodule : hdl_top
 
 `endif
-
