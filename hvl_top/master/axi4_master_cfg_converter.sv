@@ -53,4 +53,3 @@ function void axi4_master_cfg_converter:: do_print(uvm_printer printer);
 endfunction : do_print
 
 `endif
-
