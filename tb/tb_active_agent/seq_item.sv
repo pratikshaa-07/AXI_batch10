@@ -77,7 +77,7 @@ class seq_item extends uvm_sequence_item;
     if (mode == 0)
     {
       data[0] == 8'h00;
-      strobe =='b0;
+     // strobe =='b0;
     }
   }
   // write packet: no data byte may collide with sop/eop

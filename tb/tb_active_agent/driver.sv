@@ -105,6 +105,7 @@ class driver extends uvm_driver #(seq_item);
     foreach (tx.data[i])
     begin
       temp = {>>{tx.data[i]}};
+      $display("data=%0p",temp);
       stream = {stream,temp};
       //`uvm_info("DRV",$sformatf("data = %0b",tx.data[i]),UVM_LOW)
      // `uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
