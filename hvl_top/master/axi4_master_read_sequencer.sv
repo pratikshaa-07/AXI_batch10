@@ -94,4 +94,3 @@ task axi4_master_read_sequencer::run_phase(uvm_phase phase);
 endtask : run_phase
 
 `endif
-
