@@ -192,3 +192,4 @@ function void axi4_master_coverage::report_phase(uvm_phase phase);
 endfunction: report_phase
 
 `endif
+

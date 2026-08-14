@@ -94,3 +94,4 @@ task axi4_master_write_sequencer::run_phase(uvm_phase phase);
 endtask : run_phase
 
 `endif
+
