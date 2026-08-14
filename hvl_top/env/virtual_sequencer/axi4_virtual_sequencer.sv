@@ -107,4 +107,3 @@ task axi4_virtual_sequencer::run_phase(uvm_phase phase);
 endtask : run_phase
 
 `endif
-
