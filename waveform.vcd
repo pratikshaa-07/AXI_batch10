@@ -1,0 +1,38 @@
+$date
+	Mon Aug 17 13:02:17 2026
+$end
+$version
+	QuestaSim Version 10.6c
+$end
+$timescale
+	1ps
+$end
+
+$scope module hdl_top $end
+
+$scope begin axi4_slave_agent_bfm[0] $end
+
+$scope module axi4_slave_agent_bfm_h $end
+$upscope $end
+$upscope $end
+
+$scope module dut $end
+
+$scope module DUT_FIFO $end
+
+$scope module write_fifo $end
+$upscope $end
+
+$scope module read_fifo $end
+$upscope $end
+$upscope $end
+
+$scope module decoder $end
+
+$scope begin loop $end
+$upscope $end
+$upscope $end
+
+$scope module DUT_axi $end
+
+$scope module AXI_WRITE_CONTROL $end
