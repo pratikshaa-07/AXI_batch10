@@ -1,4 +1,4 @@
-`ifndef AXI4_SLAVE_AGENT_CONFIG_INCLUDED_
+XI4_SLAVE_AGENT_CONFIG_INCLUDED_
 `define AXI4_SLAVE_AGENT_CONFIG_INCLUDED_
 
 //--------------------------------------------------------------------------------------------
