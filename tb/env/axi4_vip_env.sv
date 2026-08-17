@@ -37,7 +37,6 @@ class axi_vip_env extends uvm_env;
     slave_agt_h.axi4_slave_agent_cfg_h.min_address         = 0;
     slave_agt_h.axi4_slave_agent_cfg_h.max_address         = 2**(SLAVE_MEMORY_SIZE) - 1;
     slave_agt_h.axi4_slave_agent_cfg_h.slave_response_mode = RESP_IN_ORDER;
-    slave_agt_h.axi4_slave_agent_cfg_h.read_data_mode      = RANDOM_DATA_MODE;
   endfunction
 
 endclass
