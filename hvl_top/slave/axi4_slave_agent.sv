@@ -112,3 +112,4 @@ function void axi4_slave_agent::connect_phase(uvm_phase phase);
 endfunction: connect_phase
 
 `endif
+
