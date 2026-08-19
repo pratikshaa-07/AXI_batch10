@@ -7,6 +7,9 @@ class scoreboard extends uvm_scoreboard;
   //assosiative array for storing the wrt packet
   bit[31:0]array[seq_item];
 
+  //seq item
+  seq_item wrt,rd;
+
   function new(string name="scoreboard", uvm_component parent=null);
     super.new(name, parent);
   endfunction
@@ -19,7 +22,7 @@ class scoreboard extends uvm_scoreboard;
 
   task run_phase(uvm_phase phase);
     forever begin
-        seq_item wrt,rd;
+        // seq_item wrt,rd;
         wrt = seq_item::type_id::create("wrt");
         rd  = seq_item::type_id::create("rd");
       fork
@@ -37,14 +40,15 @@ class scoreboard extends uvm_scoreboard;
   endtask
 
   task wrt_task();
-     /* if(wrt.wr_en==0)
+      if(wrt.wr_en==0)
       begin
           `uvm_info("SCB","wr_en is zero",UVM_LOW)
       end
       else
       begin
-          `uvm_info("SCB","Inside the wr_en=1 loop",UVM_LOW)
-      end*/
+          `uvm_info("SCB","Inside the wr_en=1 ",UVM_LOW)
+          `uvm_info("SCB",$sformatf("got packet = %0d",wrt.wr_data),UVM_LOW)
+      end
   endtask
 
   task rd_task();
