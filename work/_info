@@ -8,42 +8,31 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_10/pratikshashetty/axi4/AXI_batch10
-T_opt
-!s110 1787133273
-VgISP<KQSgWFfblU9JDY`F2
-04 6 4 work tb_top fast 0
-04 7 4 work hdl_top fast 0
-=1-6805caf5892e-6a857d59-57fd0-13a12
-o-quiet -auto_acc_if_foreign -work work
-Z1 tCvgOpt 0
-n@_opt
-OE;O;10.6c;65
 Xaxi4_globals_pkg
-Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1787133268
-!i10b 1
-!s100 6bojT^kE=9NJ;2;aozF`k1
-IKRd8mBV<^I8hPU91DmbO52
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 VKRd8mBV<^I8hPU91DmbO52
-S1
-R0
-w1786948934
-Z3 8globals/axi4_globals_pkg.sv
-Z4 Fglobals/axi4_globals_pkg.sv
-L0 8
-Z5 OE;L;10.6c;65
 r1
 !s85 0
 31
-Z6 !s108 1787133268.000000
-Z7 !s107 tb/test/axi4_virtual_read_test.sv|tb/test/axi4_virtual_write_test.sv|tb/test/single_seq_test.sv|tb/test/base_test.sv|tb/env/top_env.sv|tb/vseq/axi4_virtual_read_seq.sv|tb/vseq/axi4_virtual_write_seq.sv|tb/vseq/top_vseq.sv|tb/env/axi4_vip_env.sv|tb/env/environment.sv|tb/env/scoreboard.sv|tb/tb_passive_agent/passive_agent.sv|tb/tb_passive_agent/passive_monitor.sv|tb/tb_active_agent/read_seq.sv|tb/tb_active_agent/write_seq.sv|tb/tb_active_agent/active_agent.sv|tb/tb_active_agent/active_monitor.sv|tb/tb_active_agent/driver.sv|tb/tb_active_agent/sequencer.sv|tb/tb_active_agent/seq_item.sv|tb/slave_seq/axi4_slave_read_seq.sv|tb/slave_seq/axi4_slave_write_seq.sv|tb/slave_seq/axi4_slave_base_seq.sv|vip/axi_slave_vip/axi4_slave_agent.sv|vip/axi_slave_vip/axi4_slave_monitor_proxy.sv|vip/axi_slave_vip/axi4_slave_driver_proxy.sv|vip/axi_slave_vip/axi4_slave_read_sequencer.sv|vip/axi_slave_vip/axi4_slave_write_sequencer.sv|vip/axi_slave_vip/axi4_slave_coverage.sv|vip/axi_slave_vip/axi4_slave_cfg_converter.sv|vip/axi_slave_vip/axi4_slave_seq_item_converter.sv|vip/axi_slave_vip/axi4_slave_agent_config.sv|vip/axi_slave_vip/axi4_slave_tx.sv|vip/axi_slave_vip/axi4_slave_memory.sv|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|tb_top.sv|tb/tb_pkg.sv|rtl/Top_Module_AXI4.v|rtl/AXI_Master.v|rtl/write_response_handler.v|rtl/AXI_MASTER_READ_CONTROL.v|rtl/AXI_MASTER_WRITE_CONTROL.v|rtl/decoder.v|rtl/sync_fifo.v|rtl/design_fifo.v|hdl_top/hdl_top.sv|hdl_top/tb_slave_assertions.sv|hdl_top/slave_assertions.sv|hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv|hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv|hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv|vip/axi_slave_vip/axi4_slave_pkg.sv|hdl_top/cpu_inf/interface.sv|hdl_top/axi4_interface/axi4_if.sv|globals/axi4_globals_pkg.sv|
-Z8 !s90 -sv|-timescale=1ns/1ps|+define+AXI_MODE_master|-f|sim/cpu_tb.f|+incdir+vip/axi_slave_vip|+incdir+hdl_top/axi4_interface|+incdir+hdl_top/cpu_inf|-mfcu|
+!i10b 1
+!s100 6bojT^kE=9NJ;2;aozF`k1
+IKRd8mBV<^I8hPU91DmbO52
+S1
+R0
+w1786948934
+Z2 8globals/axi4_globals_pkg.sv
+Z3 Fglobals/axi4_globals_pkg.sv
+L0 8
+Z4 OE;L;10.6c;65
+Z5 !s108 1787134102.000000
+Z6 !s107 tb/test/axi4_virtual_read_test.sv|tb/test/axi4_virtual_write_test.sv|tb/test/single_seq_test.sv|tb/test/base_test.sv|tb/env/top_env.sv|tb/vseq/axi4_virtual_read_seq.sv|tb/vseq/axi4_virtual_write_seq.sv|tb/vseq/top_vseq.sv|tb/env/axi4_vip_env.sv|tb/env/environment.sv|tb/env/scoreboard.sv|tb/tb_passive_agent/passive_agent.sv|tb/tb_passive_agent/passive_monitor.sv|tb/tb_active_agent/read_seq.sv|tb/tb_active_agent/write_seq.sv|tb/tb_active_agent/active_agent.sv|tb/tb_active_agent/active_monitor.sv|tb/tb_active_agent/driver.sv|tb/tb_active_agent/sequencer.sv|tb/tb_active_agent/seq_item.sv|tb/slave_seq/axi4_slave_read_seq.sv|tb/slave_seq/axi4_slave_write_seq.sv|tb/slave_seq/axi4_slave_base_seq.sv|vip/axi_slave_vip/axi4_slave_agent.sv|vip/axi_slave_vip/axi4_slave_monitor_proxy.sv|vip/axi_slave_vip/axi4_slave_driver_proxy.sv|vip/axi_slave_vip/axi4_slave_read_sequencer.sv|vip/axi_slave_vip/axi4_slave_write_sequencer.sv|vip/axi_slave_vip/axi4_slave_coverage.sv|vip/axi_slave_vip/axi4_slave_cfg_converter.sv|vip/axi_slave_vip/axi4_slave_seq_item_converter.sv|vip/axi_slave_vip/axi4_slave_agent_config.sv|vip/axi_slave_vip/axi4_slave_tx.sv|vip/axi_slave_vip/axi4_slave_memory.sv|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|tb_top.sv|tb/tb_pkg.sv|rtl/Top_Module_AXI4.v|rtl/AXI_Master.v|rtl/write_response_handler.v|rtl/AXI_MASTER_READ_CONTROL.v|rtl/AXI_MASTER_WRITE_CONTROL.v|rtl/decoder.v|rtl/sync_fifo.v|rtl/design_fifo.v|hdl_top/hdl_top.sv|hdl_top/tb_slave_assertions.sv|hdl_top/slave_assertions.sv|hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv|hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv|hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv|vip/axi_slave_vip/axi4_slave_pkg.sv|hdl_top/cpu_inf/interface.sv|hdl_top/axi4_interface/axi4_if.sv|globals/axi4_globals_pkg.sv|
+Z7 !s90 -sv|-timescale=1ns/1ps|+define+AXI_MODE_master|-f|sim/cpu_tb.f|+incdir+vip/axi_slave_vip|+incdir+hdl_top/axi4_interface|+incdir+hdl_top/cpu_inf|-mfcu|
 !i113 0
-Z9 o-sv -timescale=1ns/1ps -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 !s92 -sv -timescale=1ns/1ps +define+AXI_MODE_master +incdir+vip/axi_slave_vip +incdir+hdl_top/axi4_interface +incdir+hdl_top/cpu_inf -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
+Z8 o-sv -timescale=1ns/1ps -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -timescale=1ns/1ps +define+AXI_MODE_master +incdir+vip/axi_slave_vip +incdir+hdl_top/axi4_interface +incdir+hdl_top/cpu_inf -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
 Xaxi4_globals_pkg_sv_unit
-R2
+R1
 Z11 DXx4 work 16 axi4_globals_pkg 0 22 KRd8mBV<^I8hPU91DmbO52
 Z12 DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
 V[CLSjI9U8giWb<BVk94lm0
@@ -57,8 +46,8 @@ I[CLSjI9U8giWb<BVk94lm0
 S1
 R0
 Z13 w1786951379
+R2
 R3
-R4
 Z14 8hdl_top/axi4_interface/axi4_if.sv
 Z15 Fhdl_top/axi4_interface/axi4_if.sv
 Z16 8hdl_top/cpu_inf/interface.sv
@@ -110,16 +99,16 @@ Z50 Ftb/tb_pkg.sv
 Z51 8tb_top.sv
 Z52 Ftb_top.sv
 L0 5
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Yaxi4_if
-R2
+R1
 R11
 R12
 Z53 DXx4 work 24 axi4_globals_pkg_sv_unit 0 22 [CLSjI9U8giWb<BVk94lm0
@@ -137,16 +126,16 @@ Z56 w1786700358
 R14
 R15
 L0 11
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vaxi4_slave_agent_bfm
-R2
+R1
 R11
 R12
 R53
@@ -165,16 +154,16 @@ R25
 R26
 R18
 L0 8
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Yaxi4_slave_driver_bfm
-R2
+R1
 R11
 R12
 R53
@@ -194,16 +183,16 @@ R21
 R22
 R18
 Z58 L0 10
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Yaxi4_slave_monitor_bfm
-R2
+R1
 R11
 R12
 R53
@@ -223,18 +212,18 @@ R23
 R24
 R18
 R58
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Xaxi4_slave_pkg
 !s115 axi4_slave_monitor_bfm
 !s115 axi4_slave_driver_bfm
-R2
+R1
 R12
 R11
 VRk3iSc0h[Jz5Tk=O64SRH0
@@ -262,16 +251,16 @@ Fvip/axi_slave_vip/axi4_slave_driver_proxy.sv
 Fvip/axi_slave_vip/axi4_slave_monitor_proxy.sv
 Fvip/axi_slave_vip/axi4_slave_agent.sv
 L0 8
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vAXI_Master
-R2
+R1
 R11
 R12
 R53
@@ -289,17 +278,17 @@ Z59 w1785316321
 R45
 R46
 Z60 L0 21
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 n@a@x@i_@master
 vAXI_MASTER_READ_Control
-R2
+R1
 R11
 R12
 R53
@@ -317,17 +306,17 @@ R59
 R41
 R42
 R60
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 n@a@x@i_@m@a@s@t@e@r_@r@e@a@d_@control
 vAXI_MASTER_WRITE__CONTROL
-R2
+R1
 R11
 R12
 R53
@@ -345,17 +334,17 @@ R59
 R39
 R40
 R60
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 n@a@x@i_@m@a@s@t@e@r_@w@r@i@t@e__@c@o@n@t@r@o@l
 vdesign_fifo
-R2
+R1
 R11
 R12
 R53
@@ -373,16 +362,16 @@ R59
 R33
 R34
 L0 1
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vhdl_top
-R2
+R1
 R11
 R12
 R53
@@ -401,16 +390,16 @@ R31
 R32
 R18
 L0 9
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Yinf
-R2
+R1
 R11
 R12
 R53
@@ -428,16 +417,16 @@ w1785317566
 R16
 R17
 L0 3
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vmy_decoder
-R2
+R1
 R11
 R12
 R53
@@ -455,16 +444,16 @@ R59
 R37
 R38
 L0 1
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Yslave_assertions
-R2
+R1
 R11
 R12
 R53
@@ -483,16 +472,16 @@ R27
 R28
 R18
 L0 13
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vsync_fifo
-R2
+R1
 R11
 R12
 R53
@@ -510,30 +499,30 @@ R59
 R35
 R36
 L0 1
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 Xtb_pkg
 !s115 inf
-R2
+R1
 R12
 R11
 R57
-VBJ]_YD`M4cz8T]UBiaaaH2
+V_>UZPk[>?^dD[4zel5kQa0
 r1
 !s85 0
 31
 !i10b 1
-!s100 3zOMEKR?TC335EOiQ_h`73
-IBJ]_YD`M4cz8T]UBiaaaH2
+!s100 ZI1_nU0D=4>17_Ej^8IC92
+I_>UZPk[>?^dD[4zel5kQa0
 S1
 R0
-w1787132419
+w1787134089
 R49
 R50
 R18
@@ -561,16 +550,16 @@ Ftb/test/single_seq_test.sv
 Ftb/test/axi4_virtual_write_test.sv
 Ftb/test/axi4_virtual_read_test.sv
 L0 7
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vtb_slave_assertions
-R2
+R1
 R11
 R12
 R53
@@ -588,28 +577,28 @@ R56
 R29
 R30
 L0 19
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vtb_top
-R2
+R1
 R11
 R12
 R53
 R57
-DXx4 work 6 tb_pkg 0 22 BJ]_YD`M4cz8T]UBiaaaH2
+DXx4 work 6 tb_pkg 0 22 _>UZPk[>?^dD[4zel5kQa0
 R54
 r1
 !s85 0
 31
 !i10b 1
 !s100 8CCJUbXFAE@QQ?`7`X[<P1
-IhknQ:XA^1]<an_X91=[3^3
+IDbkPE]nO0U=aRMISU90BY1
 R55
 S1
 R0
@@ -618,16 +607,16 @@ R51
 R52
 R18
 L0 12
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 vTop_Module_AXI4
-R2
+R1
 R11
 R12
 R53
@@ -645,17 +634,17 @@ R59
 R47
 R48
 L0 3
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1
 n@top_@module_@a@x@i4
 vwrite_response_handler
-R2
+R1
 R11
 R12
 R53
@@ -673,11 +662,11 @@ R59
 R43
 R44
 L0 1
+R4
 R5
 R6
 R7
-R8
 !i113 0
+R8
 R9
 R10
-R1

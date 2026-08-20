@@ -18,7 +18,7 @@ class cpu_write_seq extends uvm_sequence #(seq_item);
     //   mode ==  1;
     //   //strobe == 4'b1111;
     // });
- if (!req.randomize() with { mode == 1; wr_en == 1; rd_en == 0; strobe == 4'b1111;len==0;size==2;lock==0;cache==0;prot==0;burst==1; })
+ if (!req.randomize() with { mode == 1; wr_en == 1; rd_en == 0; strobe == 4'b1111;len==2;size==2;lock==0;cache==0;prot==0;burst==1; })
   `uvm_fatal("CPU_WR_SEQ", "Randomization failed")
   $display("address=%0h",req.addr);
   $display("data=%0p",req.data);

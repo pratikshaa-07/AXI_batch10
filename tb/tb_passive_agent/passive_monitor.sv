@@ -19,7 +19,7 @@ class passive_monitor extends uvm_monitor;
   endfunction
  
   task run_phase(uvm_phase phase);
-    repeat(4) @(vif.mon_cb);
+    repeat(3) @(vif.mon_cb);
     forever begin
       tr = seq_item::type_id::create("tr");
       tr.rd_en   = vif.mon_cb.rd_en;
