@@ -69,7 +69,7 @@ class driver extends uvm_driver #(seq_item);
     //`uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
     
     temp = {>>{tx.addr}};     stream = {stream,temp};
-    `uvm_info("DRV",$sformatf("addr = %0h",tx.addr),UVM_LOW)
+    `uvm_info("DRV",$sformatf("addr = %0d",tx.addr),UVM_LOW)
     //`uvm_info("DRV",$sformatf("stream = %0p",stream),UVM_LOW)
     
     temp = {>>{tx.len}};      stream = {stream,temp};
