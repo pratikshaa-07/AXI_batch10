@@ -1,3 +1,34 @@
+# vsim -c tb_top hdl_top -do "run -all; quit" "+UVM_TESTNAME=axi4_virtual_write_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
+# Start time: 14:46:12 on Aug 21,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: rtl/decoder.v(370): (vopt-2241) Connection width does not match width of port 'bresp'. The port definition is at: rtl/write_response_handler.v(9).
+# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'write_data'. The port definition is at: rtl/decoder.v(25).
+# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'bresp'. The port definition is at: rtl/decoder.v(64).
+# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'rresp'. The port definition is at: rtl/decoder.v(59).
+# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'arlock'. The port definition is at: rtl/decoder.v(47).
+# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'AWID'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(32).
+# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'WDATA'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(47).
+# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'awlen_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(63).
+# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'wdata_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(70).
+# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'ARLEN'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(32).
+# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'RDATA'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(42).
+# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'rdata_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(66).
+# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'rid_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(68).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'AWID'. The port definition is at: rtl/AXI_Master.v(30).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'AWLEN'. The port definition is at: rtl/AXI_Master.v(32).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'WDATA'. The port definition is at: rtl/AXI_Master.v(44).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'ARLEN'. The port definition is at: rtl/AXI_Master.v(58).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'RDATA'. The port definition is at: rtl/AXI_Master.v(69).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'awlen_d'. The port definition is at: rtl/AXI_Master.v(79).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'wdata_d'. The port definition is at: rtl/AXI_Master.v(86).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'rdata_d'. The port definition is at: rtl/AXI_Master.v(107).
+# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'rid_d'. The port definition is at: rtl/AXI_Master.v(109).
+# ** Warning: hdl_top/hdl_top.sv(73): (vopt-2241) Connection width does not match width of port 'AWLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(44).
+# ** Warning: hdl_top/hdl_top.sv(73): (vopt-2241) Connection width does not match width of port 'AWCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(48).
+# ** Warning: hdl_top/hdl_top.sv(73): (vopt-2241) Connection width does not match width of port 'ARLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(53).
+# ** Warning: hdl_top/hdl_top.sv(73): (vopt-2241) Connection width does not match width of port 'ARCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(57).
+# ** Warning: hdl_top/hdl_top.sv(73): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 46, found 45.
+# ** Warning: hdl_top/hdl_top.sv(73): (vopt-2718) [TFMPC] - Missing connection for port 'WID_a'.
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -12,90 +43,20 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -novopt tb_top hdl_top "+UVM_TESTNAME=axi4_virtual_write_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
-# Start time: 12:31:05 on Aug 20,2026
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Loading sv_std.std
+# Loading work.inf(fast)
+# Loading work.axi4_slave_driver_bfm(fast)
+# Loading work.axi4_slave_monitor_bfm(fast)
+# Loading work.axi4_globals_pkg(fast)
 # Loading mtiUvm.uvm_pkg
-# Loading work.axi4_globals_pkg
-# Loading work.axi4_globals_pkg_sv_unit
-# Loading work.inf
-# Loading work.axi4_slave_pkg
-# Loading work.tb_pkg
-# Loading work.tb_top
-# Loading work.hdl_top
-# Loading work.axi4_if
-# Loading work.Top_Module_AXI4
-# Loading work.design_fifo
-# Loading work.sync_fifo
-# Loading work.my_decoder
-# Loading work.write_response_handler
-# Loading work.AXI_Master
-# Loading work.AXI_MASTER_WRITE__CONTROL
-# Loading work.AXI_MASTER_READ_Control
-# Loading mtiUvm.questa_uvm_pkg
-# Loading work.axi4_slave_agent_bfm
-# Loading work.axi4_slave_driver_bfm
-# Loading work.axi4_slave_monitor_bfm
-# Loading work.slave_assertions
-# ** Warning: (vsim-3017) hdl_top/hdl_top.sv(73): [TFMPC] - Too few port connections. Expected 46, found 45.
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
-# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(73): [PCDPC] - Port size (4) does not match connection size (8) for port 'AWLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
-# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(73): [PCDPC] - Port size (2) does not match connection size (4) for port 'AWCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(48).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
-# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(73): [PCDPC] - Port size (4) does not match connection size (8) for port 'ARLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(53).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
-# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(73): [PCDPC] - Port size (2) does not match connection size (4) for port 'ARCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(57).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
-# ** Warning: (vsim-3722) hdl_top/hdl_top.sv(73): [TFMPC] - Missing connection for port 'WID_a'.
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (128) does not match connection size (1) for port 'write_data'. The port definition is at: rtl/decoder.v(25).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (4) does not match connection size (2) for port 'bresp'. The port definition is at: rtl/decoder.v(64).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (4) does not match connection size (2) for port 'rresp'. The port definition is at: rtl/decoder.v(59).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (10) does not match connection size (2) for port 'arlock'. The port definition is at: rtl/decoder.v(47).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
-# ** Warning: (vsim-3015) rtl/decoder.v(370): [PCDPC] - Port size (2) does not match connection size (4) for port 'bresp'. The port definition is at: rtl/write_response_handler.v(9).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder/wresp File: rtl/write_response_handler.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'AWID'. The port definition is at: rtl/AXI_Master.v(30).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'AWLEN'. The port definition is at: rtl/AXI_Master.v(32).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'WDATA'. The port definition is at: rtl/AXI_Master.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'ARLEN'. The port definition is at: rtl/AXI_Master.v(58).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'RDATA'. The port definition is at: rtl/AXI_Master.v(69).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'awlen_d'. The port definition is at: rtl/AXI_Master.v(79).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'wdata_d'. The port definition is at: rtl/AXI_Master.v(86).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'rdata_d'. The port definition is at: rtl/AXI_Master.v(107).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'rid_d'. The port definition is at: rtl/AXI_Master.v(109).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (4) does not match connection size (8) for port 'AWID'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(32).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (32) does not match connection size (64) for port 'WDATA'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(47).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (4) does not match connection size (8) for port 'awlen_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(63).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (32) does not match connection size (64) for port 'wdata_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(70).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (4) does not match connection size (8) for port 'ARLEN'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(32).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (32) does not match connection size (64) for port 'RDATA'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(42).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (32) does not match connection size (64) for port 'rdata_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(66).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
-# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (4) does not match connection size (8) for port 'rid_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(68).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
+# Loading work.axi4_slave_pkg(fast)
+# Loading work.tb_pkg(fast)
+# Loading work.axi4_globals_pkg_sv_unit(fast)
+# Loading work.tb_top(fast)
+# Loading work.hdl_top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
-add wave -position insertpoint sim:/hdl_top/dut/decoder/*
-run -all
+# run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -121,8 +82,8 @@ run -all
 # UVM_INFO @ 0: reporter [RNTST] Running test axi4_virtual_write_test...
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(94) @ 0: reporter [axi4 slave driver bfm] AXI4 SLAVE DRIVER BFM
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv(82) @ 0: reporter [axi4 slave monitor bfm] AXI4 SLAVE MONITOR BFM
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(175) @ 0: reporter [axi4 slave agent bfm] AXI4 SLAVE AGENT BFM
 # UVM_INFO hdl_top/slave_assertions.sv(70) @ 0: reporter [SLAVE_ASSERTIONS] SLAVE_ASSERTIONS
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(175) @ 0: reporter [axi4 slave agent bfm] AXI4 SLAVE AGENT BFM
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # ------------------------------------------------------------------------------------------
 # Name                                               Type                        Size  Value
@@ -272,12 +233,12 @@ run -all
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(187) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE DATA CHANNEL
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
 # address=ec5f5371
-# data=219 152 167 75 197 214 203 7 136 239 111 97
+# data=219 152 167 75
 # UVM_INFO tb/tb_active_agent/driver.sv(68) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 2
 # UVM_INFO tb/tb_active_agent/driver.sv(72) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = ec5f5371
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
 # UVM_INFO tb/tb_active_agent/driver.sv(85) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
 # UVM_INFO tb/tb_active_agent/driver.sv(89) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(93) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
@@ -287,78 +248,76 @@ run -all
 # data=1 0 0 1 1 0 0 0
 # data=1 0 1 0 0 1 1 1
 # data=0 1 0 0 1 0 1 1
-# data=1 1 0 0 0 1 0 1
-# data=1 1 0 1 0 1 1 0
-# data=1 1 0 0 1 0 1 1
-# data=0 0 0 0 0 1 1 1
-# data=1 0 0 0 1 0 0 0
-# data=1 1 1 0 1 1 1 1
-# data=0 1 1 0 1 1 1 1
-# data=0 1 1 0 0 0 0 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226211620001563812346234382165330021127 
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 50000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =182018225434223407552365994243623223296 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 50000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226211620001563812346234382165330021127
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 30000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226211620001562452304687315705581797376 
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 50000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226211620001562452304687315705581797376
 # UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 50000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 50000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 50000: uvm_test_top.tenv.env.scb [SCB] got packet = 226211620001563812346234382165330021127
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 90000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=0 wr_data=0
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 90000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(45) @ 90000: uvm_test_top.tenv.env.scb [SCB] wr_en is zero
+# UVM_INFO tb/env/scoreboard.sv(53) @ 50000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 50000: uvm_test_top.tenv.env.scb [SCB] got packet = aa2ec5f53711280fdb98a74b53000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 50000: uvm_test_top.tenv.env.scb [SCB] got address = ec5f5371
+# UVM_INFO tb/env/scoreboard.sv(56) @ 50000: uvm_test_top.tenv.env.scb [SCB] got id = 2
 # address=de937afd
-# data=155 156 52 106 52 237 47 32 133 3 250 205
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 9
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = de937afd
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=155 156 52 106
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 9
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = de937afd
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
 # data=1 0 0 1 1 0 1 1
 # data=1 0 0 1 1 1 0 0
 # data=0 0 1 1 0 1 0 0
 # data=0 1 1 0 1 0 1 0
-# data=0 0 1 1 0 1 0 0
-# data=1 1 1 0 1 1 0 1
-# data=0 0 1 0 1 1 1 1
-# data=0 0 1 0 0 0 0 0
-# data=1 0 0 0 0 1 0 1
-# data=0 0 0 0 0 0 1 1
-# data=1 1 1 1 1 0 1 0
-# data=1 1 0 0 1 1 0 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 90000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226788680103626346894229117202441514784 
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =176807987199830899736058764699761639424 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 130000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=176807987199830899736058764699761639424
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 130000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 130000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 130000: uvm_test_top.tenv.env.scb [SCB] got packet = 176807987199830899736058764699761639424
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 70000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226788680103624986852682050745124519936 
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 90000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226788680103624986852682050745124519936
+# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 90000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
+# UVM_INFO tb/env/scoreboard.sv(53) @ 90000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 90000: uvm_test_top.tenv.env.scb [SCB] got packet = aa9de937afd1280f9b9c346a53000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 90000: uvm_test_top.tenv.env.scb [SCB] got address = de937afd
+# UVM_INFO tb/env/scoreboard.sv(56) @ 90000: uvm_test_top.tenv.env.scb [SCB] got id = 9
 # address=7f9722e1
-# data=148 69 8 12 86 201 178 97 176 191 148 201
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 7
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 7f9722e1
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
+# data=148 69 8 12
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 7
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 7f9722e1
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=1 0 0 1 0 1 0 0
+# data=0 1 0 0 0 1 0 1
+# data=0 0 0 0 1 0 0 0
+# data=0 0 0 0 1 1 0 0
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 110000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226591701975860230146272130129209589760 
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 130000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226591701975860230146272130129209589760
+# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 130000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
+# UVM_INFO tb/env/scoreboard.sv(53) @ 130000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 130000: uvm_test_top.tenv.env.scb [SCB] got packet = aa77f9722e11280f9445080c53000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 130000: uvm_test_top.tenv.env.scb [SCB] got address = 7f9722e1
+# UVM_INFO tb/env/scoreboard.sv(56) @ 130000: uvm_test_top.tenv.env.scb [SCB] got id = 7
+# address=102e6ad
+# data=40 49 43 212
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 9
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 102e6ad
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
 # UVM_INFO tb/tb_active_agent/driver.sv(85) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
 # UVM_INFO tb/tb_active_agent/driver.sv(89) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(93) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(97) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(101) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=1 0 0 1 0 1 0 0
-# data=0 1 0 0 0 1 0 1
-# data=0 0 0 0 1 0 0 0
-# data=0 0 0 0 1 1 0 0
-# data=0 1 0 1 0 1 1 0
-# data=1 1 0 0 1 0 0 1
-# data=1 0 1 1 0 0 1 0
-# data=0 1 1 0 0 0 0 1
-# data=1 0 1 1 0 0 0 0
-# data=1 0 1 1 1 1 1 1
-# data=1 0 0 1 0 1 0 0
-# data=1 1 0 0 1 0 0 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226591701975861590187819196587094684257 
+# data=0 0 1 0 1 0 0 0
+# data=0 0 1 1 0 0 0 1
+# data=0 0 1 0 1 0 1 1
+# data=1 1 0 1 0 1 0 0
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 150000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226716778227172113366660559078202277888 
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 170000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
 # UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 170000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 170000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 0
@@ -368,15 +327,16 @@ run -all
 #  RUNNING
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 170000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
 # WAITING
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 170000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =234938873705294607337645608607902859264 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 170000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226591701975861590187819196587094684257
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 170000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226716778227172113366660559078202277888
 # UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 170000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 170000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 170000: uvm_test_top.tenv.env.scb [SCB] got packet = 226591701975861590187819196587094684257
+# UVM_INFO tb/env/scoreboard.sv(53) @ 170000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 170000: uvm_test_top.tenv.env.scb [SCB] got packet = aa90102e6ad1280f28312bd453000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 170000: uvm_test_top.tenv.env.scb [SCB] got address = 102e6ad
+# UVM_INFO tb/env/scoreboard.sv(56) @ 170000: uvm_test_top.tenv.env.scb [SCB] got id = 9
 # ----------------------------------------------------------------------------
 # Name                 Type           Size  Value                             
 # ----------------------------------------------------------------------------
-# req                  axi4_slave_tx  -     @1887                             
+# req                  axi4_slave_tx  -     @1895                             
 #   tx_type            string         4     READ                              
 #   arid               string         7     ARID_12                           
 #   araddr             integral       32    'ha039a5e0                        
@@ -392,38 +352,50 @@ run -all
 #   ruser              integral       4     'h7                               
 #   no_of_wait_states  integral       32    'h2                               
 # ----------------------------------------------------------------------------
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 190000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
 # UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 190000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 190000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
+# address=84cf1ee4
+# data=203 247 94 128
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 6
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 84cf1ee4
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=1 1 0 0 1 0 1 1
+# data=1 1 1 1 0 1 1 1
+# data=0 1 0 1 1 1 1 0
+# data=1 0 0 0 0 0 0 0
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 190000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226510318787576565633484824859581087744 
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 210000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 210000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=0 wr_data=0
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 210000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226510318787576565633484824859581087744
 # UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 210000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(45) @ 210000: uvm_test_top.tenv.env.scb [SCB] wr_en is zero
-# address=102e6ad
-# data=40 49 43 212 253 49 177 44 237 61 75 98
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 9
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 102e6ad
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=0 0 1 0 1 0 0 0
-# data=0 0 1 1 0 0 0 1
-# data=0 0 1 0 1 0 1 1
-# data=1 1 0 1 0 1 0 0
-# data=1 1 1 1 1 1 0 1
-# data=0 0 1 1 0 0 0 1
-# data=1 0 1 1 0 0 0 1
-# data=0 0 1 0 1 1 0 0
-# data=1 1 1 0 1 1 0 1
-# data=0 0 1 1 1 1 0 1
-# data=0 1 0 0 1 0 1 1
-# data=0 1 1 0 0 0 1 0
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 210000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226716778227173473408207625538879205676 
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =315345294080163142451901154477834502144 
+# UVM_INFO tb/env/scoreboard.sv(53) @ 210000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 210000: uvm_test_top.tenv.env.scb [SCB] got packet = aa684cf1ee41280fcbf75e8053000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 210000: uvm_test_top.tenv.env.scb [SCB] got address = 84cf1ee4
+# UVM_INFO tb/env/scoreboard.sv(56) @ 210000: uvm_test_top.tenv.env.scb [SCB] got id = 6
+# address=7b0c8ea
+# data=222 187 14 35
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 7b0c8ea
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=1 1 0 1 1 1 1 0
+# data=1 0 1 1 1 0 1 1
+# data=0 0 0 0 1 1 1 0
+# data=0 0 1 0 0 0 1 1
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 230000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226054331764433152601336753012804157440 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 250000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
 # UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 250000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 250000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 2
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(399) @ 250000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
@@ -432,15 +404,16 @@ run -all
 #  WAITING
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 250000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
 # WAITING
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 250000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 250000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=315345294080163142451901154477834502144
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 250000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226054331764433152601336753012804157440
 # UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 250000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 250000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 250000: uvm_test_top.tenv.env.scb [SCB] got packet = 315345294080163142451901154477834502144
+# UVM_INFO tb/env/scoreboard.sv(53) @ 250000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 250000: uvm_test_top.tenv.env.scb [SCB] got packet = aa107b0c8ea1280fdebb0e2353000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 250000: uvm_test_top.tenv.env.scb [SCB] got address = 7b0c8ea
+# UVM_INFO tb/env/scoreboard.sv(56) @ 250000: uvm_test_top.tenv.env.scb [SCB] got id = 1
 # -----------------------------------------------------------------
 # Name                 Type           Size  Value                  
 # -----------------------------------------------------------------
-# req                  axi4_slave_tx  -     @1947                  
+# req                  axi4_slave_tx  -     @1963                  
 #   tx_type            string         4     READ                   
 #   arid               string         7     ARID_10                
 #   araddr             integral       32    'h61d990b3             
@@ -456,77 +429,60 @@ run -all
 #   ruser              integral       4     'h1                    
 #   no_of_wait_states  integral       32    'h1                    
 # -----------------------------------------------------------------
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 270000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
 # UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 270000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# address=84cf1ee4
-# data=203 247 94 128 23 61 135 136 87 208 185 191
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 270000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
+# address=dbd6a6f7
+# data=69 117 151 38
 # UVM_INFO tb/tb_active_agent/driver.sv(68) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 6
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 84cf1ee4
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = dbd6a6f7
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
 # UVM_INFO tb/tb_active_agent/driver.sv(85) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
 # UVM_INFO tb/tb_active_agent/driver.sv(89) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(93) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(97) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
 # UVM_INFO tb/tb_active_agent/driver.sv(101) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=1 1 0 0 1 0 1 1
-# data=1 1 1 1 0 1 1 1
-# data=0 1 0 1 1 1 1 0
-# data=1 0 0 0 0 0 0 0
-# data=0 0 0 1 0 1 1 1
-# data=0 0 1 1 1 1 0 1
-# data=1 0 0 0 0 1 1 1
-# data=1 0 0 0 1 0 0 0
-# data=0 1 0 1 0 1 1 1
-# data=1 1 0 1 0 0 0 0
-# data=1 0 1 1 1 0 0 1
-# data=1 0 1 1 1 1 1 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226510318787577925675031891316400031624 
+# data=0 1 0 0 0 1 0 1
+# data=0 1 1 1 0 1 0 1
+# data=1 0 0 1 0 1 1 1
+# data=0 0 1 0 0 1 1 0
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 270000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226538561449105945167038239662088912896 
 # UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 290000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 290000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =116726600783905896688054108793407012864 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 290000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226510318787577925675031891316400031624
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(228) @ 290000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] W data sampled | beats=257 wlast=0
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 290000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226538561449105945167038239662088912896
 # UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 290000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 290000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 290000: uvm_test_top.tenv.env.scb [SCB] got packet = 226510318787577925675031891316400031624
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 310000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(228) @ 310000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] W data sampled | beats=257 wlast=0
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(336) @ 310000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_RESPONSE_CHANNEL::Slave driver sending out bid = 0
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(187) @ 330000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE DATA CHANNEL
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 330000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=0 wr_data=0
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 330000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(45) @ 330000: uvm_test_top.tenv.env.scb [SCB] wr_en is zero
-# address=7b0c8ea
-# data=222 187 14 35 159 253 30 201 198 12 85 104
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 7b0c8ea
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=1 1 0 1 1 1 1 0
-# data=1 0 1 1 1 0 1 1
-# data=0 0 0 0 1 1 1 0
-# data=0 0 1 0 0 0 1 1
-# data=1 0 0 1 1 1 1 1
-# data=1 1 1 1 1 1 0 1
-# data=0 0 0 1 1 1 1 0
-# data=1 1 0 0 1 0 0 1
-# data=1 1 0 0 0 1 1 0
-# data=0 0 0 0 1 1 0 0
-# data=0 1 0 1 0 1 0 1
-# data=0 1 1 0 1 0 0 0
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 330000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226054331764434512642883819471917358793 
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 350000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(336) @ 290000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_RESPONSE_CHANNEL::Slave driver sending out bid = 0
+# UVM_INFO tb/env/scoreboard.sv(53) @ 290000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 290000: uvm_test_top.tenv.env.scb [SCB] got packet = aa6dbd6a6f71280f4575972653000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 290000: uvm_test_top.tenv.env.scb [SCB] got address = dbd6a6f7
+# UVM_INFO tb/env/scoreboard.sv(56) @ 290000: uvm_test_top.tenv.env.scb [SCB] got id = 6
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(187) @ 310000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE DATA CHANNEL
+# address=7ca6a42e
+# data=225 193 249 176
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 3
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 7ca6a42e
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=1 1 1 0 0 0 0 1
+# data=1 1 0 0 0 0 0 1
+# data=1 1 1 1 1 0 0 1
+# data=1 0 1 1 0 0 0 0
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 310000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226258441076278486207911899662521466880 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 330000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_monitor_proxy.sv(195) @ 330000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_mon_proxy_h [axi4_slave_monitor_proxy] Sending out write response, bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 330000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
 # PACKET INPUT SIZE IS 0
 # ------------------------------------------------------------
 # Name           Type           Size  Value                   
 # ------------------------------------------------------------
-# axi4_slave_tx  axi4_slave_tx  -     @2015                   
+# axi4_slave_tx  axi4_slave_tx  -     @2019                   
 #   tx_type      string         5     WRITE                   
 #   awid         string         6     AWID_0                  
 #   awaddr       integral       32    'h0                     
@@ -537,7 +493,7 @@ run -all
 #   awcache      string         16    WRITE_BUFFERABLE        
 #   awprot       string         24    WRITE_NORMAL_SECURE_DATA
 #   awqos        integral       4     'h0                     
-#   wdata[0]     integral       32    'hc5d6cb07              
+#   wdata[0]     integral       32    'h53000000              
 #   wdata[1]     integral       32    'hdb98a74b              
 #   wstrb[0]     integral       4     'hf                     
 #   wstrb[1]     integral       4     'hf                     
@@ -547,149 +503,51 @@ run -all
 #   bresp        string         10    WRITE_OKAY              
 #   buser        integral       4     'd0                     
 # ------------------------------------------------------------
-# UVM_INFO @ 350000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_write_seqr_h [Sequencer] Dropping response for sequence 2, sequence not found.  Probable cause: sequence exited or has been killed
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 350000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO vip/axi_slave_vip/axi4_slave_monitor_proxy.sv(195) @ 350000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_mon_proxy_h [axi4_slave_monitor_proxy] Sending out write response, bid = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =263251182997948228457144949840545841152 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 370000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=263251182997948228457144949840545841152
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 370000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 370000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 370000: uvm_test_top.tenv.env.scb [SCB] got packet = 263251182997948228457144949840545841152
-# address=dbd6a6f7
-# data=69 117 151 38 207 221 116 123 216 217 133 251
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 6
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = dbd6a6f7
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=0 1 0 0 0 1 0 1
-# data=0 1 1 1 0 1 0 1
-# data=1 0 0 1 0 1 1 1
-# data=0 0 1 0 0 1 1 0
-# data=1 1 0 0 1 1 1 1
-# data=1 1 0 1 1 1 0 1
-# data=0 1 1 1 0 1 0 0
-# data=0 1 1 1 1 0 1 1
-# data=1 1 0 1 1 0 0 0
-# data=1 1 0 1 1 0 0 1
-# data=1 0 0 0 0 1 0 1
-# data=1 1 1 1 1 0 1 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226538561449107305208585306122005345403 
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 410000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =288242692980277218710300204392104591360 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 410000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226538561449107305208585306122005345403
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 410000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 410000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 410000: uvm_test_top.tenv.env.scb [SCB] got packet = 226538561449107305208585306122005345403
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 450000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=0 wr_data=0
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 450000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(45) @ 450000: uvm_test_top.tenv.env.scb [SCB] wr_en is zero
-# address=7ca6a42e
-# data=225 193 249 176 245 86 218 147 128 33 245 128
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 3
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 7ca6a42e
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=1 1 1 0 0 0 0 1
-# data=1 1 0 0 0 0 0 1
-# data=1 1 1 1 1 0 0 1
-# data=1 0 1 1 0 0 0 0
-# data=1 1 1 1 0 1 0 1
-# data=0 1 0 1 0 1 1 0
-# data=1 1 0 1 1 0 1 0
-# data=1 0 0 1 0 0 1 1
-# data=1 0 0 0 0 0 0 0
-# data=0 0 1 0 0 0 0 1
-# data=1 1 1 1 0 1 0 1
-# data=1 0 0 0 0 0 0 0
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 450000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226258441076279846249458966123066612371 
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 470000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =170317508614045833343689529849095913472 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 490000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=170317508614045833343689529849095913472
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 490000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 490000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 490000: uvm_test_top.tenv.env.scb [SCB] got packet = 170317508614045833343689529849095913472
+# UVM_INFO @ 330000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_write_seqr_h [Sequencer] Dropping response for sequence 2, sequence not found.  Probable cause: sequence exited or has been killed
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 330000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226258441076278486207911899662521466880
+# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 330000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
+# UVM_INFO tb/env/scoreboard.sv(53) @ 330000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 330000: uvm_test_top.tenv.env.scb [SCB] got packet = aa37ca6a42e1280fe1c1f9b053000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 330000: uvm_test_top.tenv.env.scb [SCB] got address = 7ca6a42e
+# UVM_INFO tb/env/scoreboard.sv(56) @ 330000: uvm_test_top.tenv.env.scb [SCB] got id = 3
 # address=4bca2a5a
-# data=50 72 224 100 98 89 204 235 56 132 49 117
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 4
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 4bca2a5a
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=50 72 224 100
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 4
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 4bca2a5a
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
 # data=0 0 1 1 0 0 1 0
 # data=0 1 0 0 1 0 0 0
 # data=1 1 1 0 0 0 0 0
 # data=0 1 1 0 0 1 0 0
-# data=0 1 1 0 0 0 1 0
-# data=0 1 0 1 1 0 0 1
-# data=1 1 0 0 1 1 0 0
-# data=1 1 1 0 1 0 1 1
-# data=0 0 1 1 1 0 0 0
-# data=1 0 0 0 0 1 0 0
-# data=0 0 1 1 0 0 0 1
-# data=0 1 1 1 0 1 0 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 510000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226325661449045093391260492843368172779 
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 530000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =75123154082734735045529133455268380672 
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 530000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226325661449045093391260492843368172779
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 530000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 530000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 530000: uvm_test_top.tenv.env.scb [SCB] got packet = 226325661449045093391260492843368172779
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 570000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 570000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=0 wr_data=0
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 570000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(45) @ 570000: uvm_test_top.tenv.env.scb [SCB] wr_en is zero
-# address=3af53c0d
-# data=157 111 87 116 196 173 79 37 241 206 22 121
-# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 12
-# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 3af53c0d
-# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 2
-# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=12
-# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
-# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
-# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
-# data=1 0 0 1 1 1 0 1
-# data=0 1 1 0 1 1 1 1
-# data=0 1 0 1 0 1 1 1
-# data=0 1 1 1 0 1 0 0
-# data=1 1 0 0 0 1 0 0
-# data=1 0 1 0 1 1 0 1
-# data=0 1 0 0 1 1 1 1
-# data=0 0 1 0 0 1 0 1
-# data=1 1 1 1 0 0 0 1
-# data=1 1 0 0 1 1 1 0
-# data=0 0 0 1 0 1 1 0
-# data=0 1 1 1 1 0 0 1
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 570000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226984813228143454113724493252321431333 
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 590000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 590000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 9
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(399) @ 590000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 350000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226325661449043733349713426385289084928 
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 370000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 370000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226325661449043733349713426385289084928
+# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 370000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
+# UVM_INFO tb/env/scoreboard.sv(53) @ 370000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 370000: uvm_test_top.tenv.env.scb [SCB] got packet = aa44bca2a5a1280f3248e06453000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 370000: uvm_test_top.tenv.env.scb [SCB] got address = 4bca2a5a
+# UVM_INFO tb/env/scoreboard.sv(56) @ 370000: uvm_test_top.tenv.env.scb [SCB] got id = 4
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 390000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 390000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 2
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(399) @ 390000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
 #  FINISHED
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(400) @ 590000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(400) @ 390000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
 #  WAITING
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 590000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 390000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
 # WAITING
-# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 590000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =321414015962329100239200600133885493248 
+# address=3af53c0d
+# data=157 111 87 116
 # ------------------------------------------------------------------------
 # Name                 Type           Size  Value                         
 # ------------------------------------------------------------------------
-# req                  axi4_slave_tx  -     @2163                         
+# req                  axi4_slave_tx  -     @2075                         
 #   tx_type            string         4     READ                          
 #   arid               string         6     ARID_1                        
 #   araddr             integral       32    'h7abe55f1                    
@@ -705,57 +563,70 @@ run -all
 #   ruser              integral       4     'hf                           
 #   no_of_wait_states  integral       32    'h0                           
 # ------------------------------------------------------------------------
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 610000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 610000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 610000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=321414015962329100239200600133885493248
-# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 610000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
-# UVM_INFO tb/env/scoreboard.sv(49) @ 610000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
-# UVM_INFO tb/env/scoreboard.sv(50) @ 610000: uvm_test_top.tenv.env.scb [SCB] got packet = 321414015962329100239200600133885493248
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 630000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
-# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 630000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 630000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 7
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(399) @ 630000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
+# UVM_INFO tb/tb_active_agent/driver.sv(68) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] txn_id = 12
+# UVM_INFO tb/tb_active_agent/driver.sv(72) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] addr = 3af53c0d
+# UVM_INFO tb/tb_active_agent/driver.sv(76) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] len = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(80) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] size = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(82) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] data.size()=4
+# UVM_INFO tb/tb_active_agent/driver.sv(85) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] burst = 1
+# UVM_INFO tb/tb_active_agent/driver.sv(89) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] lock = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(93) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] cache = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(97) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] prot = 0
+# UVM_INFO tb/tb_active_agent/driver.sv(101) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] strobe = 1111
+# data=1 0 0 1 1 1 0 1
+# data=0 1 1 0 1 1 1 1
+# data=0 1 0 1 0 1 1 1
+# data=0 1 1 1 0 1 0 0
+# UVM_INFO tb/tb_active_agent/driver.sv(141) @ 390000: uvm_test_top.tenv.env.act_agt.driver [DRV] Beat =226984813228142094072177426792592703488 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 410000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 410000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
+# UVM_INFO tb/tb_active_agent/active_monitor.sv(26) @ 410000: uvm_test_top.tenv.env.act_agt.mon [WRT_MON] wr_en=1 wr_data=226984813228142094072177426792592703488
+# UVM_INFO tb/tb_passive_agent/passive_monitor.sv(27) @ 410000: uvm_test_top.tenv.env.pas_agt.mon [RD_MON] rd_en=0 rd_data=0
+# UVM_INFO tb/env/scoreboard.sv(53) @ 410000: uvm_test_top.tenv.env.scb [SCB] Inside the wr_en=1 
+# UVM_INFO tb/env/scoreboard.sv(54) @ 410000: uvm_test_top.tenv.env.scb [SCB] got packet = aac3af53c0d1280f9d6f577453000000
+# UVM_INFO tb/env/scoreboard.sv(55) @ 410000: uvm_test_top.tenv.env.scb [SCB] got address = 3af53c0d
+# UVM_INFO tb/env/scoreboard.sv(56) @ 410000: uvm_test_top.tenv.env.scb [SCB] got id = 12
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 430000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 430000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 430000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 7
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(399) @ 430000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
 #  FINISHED
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(400) @ 630000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(400) @ 430000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
 #  WAITING
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 630000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 430000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
 # WAITING
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 630000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(189) @ 630000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 21.72 %
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 430000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(189) @ 430000: uvm_test_top.tenv.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 22.57 %
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  230
+# UVM_INFO :  224
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [AXI4_SLAVE_DRIVER_BFM]     8
-# [DRV]   120
+# [DRV]   110
 # [Questa UVM]     2
-# [RD_MON]    15
+# [RD_MON]    10
 # [RNTST]     1
-# [SCB]    25
+# [SCB]    40
 # [SLAVE_ASSERTIONS]     1
 # [SLAVE_DRIVER_WADDR_PHASE]     4
 # [SLAVE_STATUS_CHECK]    12
 # [Sequencer]     1
 # [TEST_DONE]     1
 # [UVMTOP]     1
-# [WRT_MON]    15
+# [WRT_MON]    10
 # [axi4 slave agent bfm]     1
 # [axi4 slave driver bfm]     1
 # [axi4 slave monitor bfm]     1
 # [axi4_slave_coverage]     1
 # [axi4_slave_driver_proxy]     7
 # [axi4_slave_monitor_proxy]     1
-# [axi4_slave_seq_item_conv_class]    12
+# [axi4_slave_seq_item_conv_class]    11
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 630 ns  Iteration: 68  Instance: /tb_top
-# 1
-# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# Causality operation skipped due to absence of debug database file
-quit
-# End time: 12:35:39 on Aug 20,2026, Elapsed time: 0:04:34
-# Errors: 0, Warnings: 30
+#    Time: 430 ns  Iteration: 68  Instance: /tb_top
+# End time: 14:46:16 on Aug 21,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 28

@@ -7,6 +7,9 @@ class scoreboard extends uvm_scoreboard;
   //assosiative array for storing the wrt packet
   bit[31:0]array[seq_item];
 
+  //assosiative array for wrt response 24 bits packet with address as index
+  bit[23:0]wrt_rsp[bit[31:0]];
+
   //seq item
   seq_item wrt,rd;
 
@@ -40,6 +43,7 @@ class scoreboard extends uvm_scoreboard;
   endtask
 
   task wrt_task();
+      bit[23:0]temp;
       if(wrt.wr_en==0)
       begin
           `uvm_info("SCB","wr_en is zero",UVM_LOW)
@@ -47,7 +51,15 @@ class scoreboard extends uvm_scoreboard;
       else
       begin
         `uvm_info("SCB","Inside the wr_en=1 ",UVM_LOW)
-        `uvm_info("SCB",$sformatf("got packet = %0b",wrt.wr_data),UVM_LOW)
+        `uvm_info("SCB",$sformatf("got packet = %0h",wrt.wr_data),UVM_LOW)
+        `uvm_info("SCB",$sformatf("got address = %0h",wrt.wr_data[115:84]),UVM_LOW)
+        `uvm_info("SCB",$sformatf("got id = %0d",wrt.wr_data[119:116]),UVM_LOW)
+        temp='b0;
+        temp[7:0]=8'b10101010;
+        temp[23:16]=8'b01010011;
+        temp[11:8]=wrt.wr_data[119:116];
+        temp[15:12]=4'b0;
+        
       end
   endtask
 

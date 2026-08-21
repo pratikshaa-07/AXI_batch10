@@ -9,25 +9,22 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_10/pratikshashetty/axi4/AXI_batch10
 T_opt
-!s110 1787208624
-VZB=eaJ^6z0@[>QMAXU;Z03
+!s110 1787303773
+VRKKnLX8XTjZe_e?29ReoO3
 04 6 4 work tb_top fast 0
 04 7 4 work hdl_top fast 0
-=1-6805caf5892e-6a86a3af-f1bb3-23948
+=1-6805caf5892e-6a88175c-85aa9-209c
 o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
 OE;O;10.6c;65
-R0
 Xaxi4_globals_pkg
 Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-VAi8U^5<IO;64?C1XTkkgY0
-r1
-!s85 0
-31
+!s110 1787303768
 !i10b 1
-!s100 >SLK4m2lc5XiCo9kQ4a?k2
-IAi8U^5<IO;64?C1XTkkgY0
+!s100 6bojT^kE=9NJ;2;aozF`k1
+IKRd8mBV<^I8hPU91DmbO52
+VKRd8mBV<^I8hPU91DmbO52
 S1
 R0
 w1786948934
@@ -35,24 +32,27 @@ Z3 8globals/axi4_globals_pkg.sv
 Z4 Fglobals/axi4_globals_pkg.sv
 L0 8
 Z5 OE;L;10.6c;65
-Z6 !s108 1787208615.000000
+r1
+!s85 0
+31
+Z6 !s108 1787303768.000000
 Z7 !s107 tb/test/axi4_virtual_read_test.sv|tb/test/axi4_virtual_write_test.sv|tb/test/single_seq_test.sv|tb/test/base_test.sv|tb/env/top_env.sv|tb/vseq/axi4_virtual_read_seq.sv|tb/vseq/axi4_virtual_write_seq.sv|tb/vseq/top_vseq.sv|tb/env/axi4_vip_env.sv|tb/env/environment.sv|tb/env/scoreboard.sv|tb/tb_passive_agent/passive_agent.sv|tb/tb_passive_agent/passive_monitor.sv|tb/tb_active_agent/read_seq.sv|tb/tb_active_agent/write_seq.sv|tb/tb_active_agent/active_agent.sv|tb/tb_active_agent/active_monitor.sv|tb/tb_active_agent/driver.sv|tb/tb_active_agent/sequencer.sv|tb/tb_active_agent/seq_item.sv|tb/slave_seq/axi4_slave_read_seq.sv|tb/slave_seq/axi4_slave_write_seq.sv|tb/slave_seq/axi4_slave_base_seq.sv|vip/axi_slave_vip/axi4_slave_agent.sv|vip/axi_slave_vip/axi4_slave_monitor_proxy.sv|vip/axi_slave_vip/axi4_slave_driver_proxy.sv|vip/axi_slave_vip/axi4_slave_read_sequencer.sv|vip/axi_slave_vip/axi4_slave_write_sequencer.sv|vip/axi_slave_vip/axi4_slave_coverage.sv|vip/axi_slave_vip/axi4_slave_cfg_converter.sv|vip/axi_slave_vip/axi4_slave_seq_item_converter.sv|vip/axi_slave_vip/axi4_slave_agent_config.sv|vip/axi_slave_vip/axi4_slave_tx.sv|vip/axi_slave_vip/axi4_slave_memory.sv|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|tb_top.sv|tb/tb_pkg.sv|rtl/Top_Module_AXI4.v|rtl/AXI_Master.v|rtl/write_response_handler.v|rtl/AXI_MASTER_READ_CONTROL.v|rtl/AXI_MASTER_WRITE_CONTROL.v|rtl/decoder.v|rtl/sync_fifo.v|rtl/design_fifo.v|hdl_top/hdl_top.sv|hdl_top/tb_slave_assertions.sv|hdl_top/slave_assertions.sv|hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv|hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv|hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv|vip/axi_slave_vip/axi4_slave_pkg.sv|hdl_top/cpu_inf/interface.sv|hdl_top/axi4_interface/axi4_if.sv|globals/axi4_globals_pkg.sv|
-Z8 !s90 -sv|-timescale=1ns/1ps|-f|sim/cpu_tb.f|+incdir+vip/axi_slave_vip|+incdir+hdl_top/axi4_interface|+incdir+hdl_top/cpu_inf|-mfcu|
+Z8 !s90 -sv|-timescale=1ns/1ps|+define+AXI_MODE_master|-f|sim/cpu_tb.f|+incdir+vip/axi_slave_vip|+incdir+hdl_top/axi4_interface|+incdir+hdl_top/cpu_inf|-mfcu|
 !i113 0
 Z9 o-sv -timescale=1ns/1ps -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 !s92 -sv -timescale=1ns/1ps +incdir+vip/axi_slave_vip +incdir+hdl_top/axi4_interface +incdir+hdl_top/cpu_inf -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 -sv -timescale=1ns/1ps +define+AXI_MODE_master +incdir+vip/axi_slave_vip +incdir+hdl_top/axi4_interface +incdir+hdl_top/cpu_inf -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 Xaxi4_globals_pkg_sv_unit
 R2
-Z11 DXx4 work 16 axi4_globals_pkg 0 22 Ai8U^5<IO;64?C1XTkkgY0
+Z11 DXx4 work 16 axi4_globals_pkg 0 22 KRd8mBV<^I8hPU91DmbO52
 Z12 DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
-V??4bd0?`24Kdl^h^nOo5h3
+V[CLSjI9U8giWb<BVk94lm0
 r1
 !s85 0
 31
 !i10b 1
 !s100 @Tab^]zoG@6n5=o7S4fn70
-I??4bd0?`24Kdl^h^nOo5h3
+I[CLSjI9U8giWb<BVk94lm0
 !i103 1
 S1
 R0
@@ -122,14 +122,14 @@ Yaxi4_if
 R2
 R11
 R12
-Z53 DXx4 work 24 axi4_globals_pkg_sv_unit 0 22 ??4bd0?`24Kdl^h^nOo5h3
+Z53 DXx4 work 24 axi4_globals_pkg_sv_unit 0 22 [CLSjI9U8giWb<BVk94lm0
 Z54 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 31
 !i10b 1
 !s100 O4Z3WYKc];KXV;Nn4SGaK3
-Iff6j;`cf<TQTcQ`AEo>7M2
+I::27fR?6denhhXh<a7diO0
 Z55 !s105 axi4_globals_pkg_sv_unit
 S1
 R0
@@ -156,7 +156,7 @@ r1
 31
 !i10b 1
 !s100 QkzWB:zMY1_PMIjk1V7RA1
-IV`Njnh:dBG4=Hdzmf6iXY3
+IALi[3OgANhY<0hnd<dKKD1
 R55
 S1
 R0
@@ -178,14 +178,14 @@ R2
 R11
 R12
 R53
-Z57 DXx4 work 14 axi4_slave_pkg 0 22 m8km82[aJh2CoZ_U5GzER0
+Z57 DXx4 work 14 axi4_slave_pkg 0 22 Rk3iSc0h[Jz5Tk=O64SRH0
 R54
 r1
 !s85 0
 31
 !i10b 1
 !s100 68fF8?Z3[c9K<gNmCbNg51
-ILKnH5YkgAWAdLIgUTVDO93
+I2<iX:AG7QY`cI:3@`dV:Z3
 R55
 S1
 R0
@@ -214,7 +214,7 @@ r1
 31
 !i10b 1
 !s100 6h7dl;:azCVQfEIJP6^4R2
-I?ZMDh_4XSN9BV4Hm_dLI21
+Iz6fC=?_KEn`lNk<_KA<KI2
 R55
 S1
 R0
@@ -237,13 +237,13 @@ Xaxi4_slave_pkg
 R2
 R12
 R11
-Vm8km82[aJh2CoZ_U5GzER0
+VRk3iSc0h[Jz5Tk=O64SRH0
 r1
 !s85 0
 31
 !i10b 1
 !s100 G<N3meSWHL2Yhh?[^MBL;0
-Im8km82[aJh2CoZ_U5GzER0
+IRk3iSc0h[Jz5Tk=O64SRH0
 S1
 R0
 R13
@@ -281,7 +281,7 @@ r1
 31
 !i10b 1
 !s100 ^7W<S57M=3zoTK35AmoTY2
-IX;A[8:5=Rn]l5F66Dazne2
+IYG5mQz?95GRVdPbE@EO=h0
 R55
 S1
 R0
@@ -309,7 +309,7 @@ r1
 31
 !i10b 1
 !s100 SdzBIe?gN1XHB=ZYz;99>0
-I32@@z0emG1NU?l5RAV_]M2
+IhQcADLE_bdN]87;9XfN7P2
 R55
 S1
 R0
@@ -337,7 +337,7 @@ r1
 31
 !i10b 1
 !s100 Yz=<R9Gj03cC?=Il=5lzX3
-I9KR1h:o9ge0oOl9DMSnXB0
+IbCK4aO4DL0gjTYYKF4We:3
 R55
 S1
 R0
@@ -365,7 +365,7 @@ r1
 31
 !i10b 1
 !s100 zJzLz=6Aa[85Y=0Yc@8;d3
-IKU17=HD2>;hhNQPR6GQJ]2
+I2N<52:?Zf;837>8kTNCQE2
 R55
 S1
 R0
@@ -392,7 +392,7 @@ r1
 31
 !i10b 1
 !s100 17CN<5FbEGnV7S1HeE4O91
-I12k5VTT2;Y6GlS2TD6MCJ1
+IZ[ie@anhZVHb3CEF@Jlfa0
 R55
 S1
 R0
@@ -420,7 +420,7 @@ r1
 31
 !i10b 1
 !s100 KOOlWcYD?W6Hen`o=;5Ao3
-IFJj30mP9^oUoBM^dK<_R50
+IMkl;;1?IFkK4Pk;;5AkDW1
 R55
 S1
 R0
@@ -447,7 +447,7 @@ r1
 31
 !i10b 1
 !s100 k?_kQh1`3e;0>PZ4MWF[i0
-IE6Ije4378@AQ9Sd8Z[Li>0
+I4URl384608EH6KbWF;05Y3
 R55
 S1
 R0
@@ -474,7 +474,7 @@ r1
 31
 !i10b 1
 !s100 _7=0N]`46jQd<1FVdlRhe3
-IJVEAcgK91o6TbZQM83ga50
+IQQK6`mcUVW>1lX>ZnVEFJ0
 R55
 S1
 R0
@@ -502,7 +502,7 @@ r1
 31
 !i10b 1
 !s100 ;>kRgM_LaaGWO@CYX7ZFF1
-If@KZ7k^:DC=nJC4djiZ:e3
+I9c@MJNHOjX8h=;:aY6CG?1
 R55
 S1
 R0
@@ -524,16 +524,16 @@ R2
 R12
 R11
 R57
-V=nNPf6iFEl>PNj4khf3nR1
+VZN4d[_jEQ4?B[UL33B9hj2
 r1
 !s85 0
 31
 !i10b 1
-!s100 ZI1_nU0D=4>17_Ej^8IC92
-I=nNPf6iFEl>PNj4khf3nR1
+!s100 ozelGT8<R_TmHTafkBn9K3
+IZN4d[_jEQ4?B[UL33B9hj2
 S1
 R0
-w1787134089
+w1787303765
 R49
 R50
 R18
@@ -580,7 +580,7 @@ r1
 31
 !i10b 1
 !s100 35kgeIFcX=22K?f8<Pn@:0
-I<1]UC5>H<?@3TIl2b:bL]0
+IRbkSn;kQoKe;cUW;dogI70
 R55
 S1
 R0
@@ -602,14 +602,14 @@ R11
 R12
 R53
 R57
-DXx4 work 6 tb_pkg 0 22 =nNPf6iFEl>PNj4khf3nR1
+DXx4 work 6 tb_pkg 0 22 ZN4d[_jEQ4?B[UL33B9hj2
 R54
 r1
 !s85 0
 31
 !i10b 1
 !s100 8CCJUbXFAE@QQ?`7`X[<P1
-I02L]QC9hfMdNb:MTon8>]2
+IEASJf@4d]lCjjMIGE>dYD1
 R55
 S1
 R0
@@ -637,7 +637,7 @@ r1
 31
 !i10b 1
 !s100 E?_J5FG?Q7^igSJmddDL70
-IJh0nT?HnjX1gLfD8=nIjl2
+IQ=7Z1L_k0LIDN3AhOAkAF2
 R55
 S1
 R0
@@ -665,7 +665,7 @@ r1
 31
 !i10b 1
 !s100 K30DKhoBka?YYd`AiEhcb1
-IQ>X``YjhIA_A7zjCMG^7=2
+IB5gM2<B3LBd80GBNc;Q@H2
 R55
 S1
 R0
