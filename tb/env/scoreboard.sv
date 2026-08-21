@@ -48,6 +48,7 @@ class scoreboard extends uvm_scoreboard;
       begin
           `uvm_info("SCB","Inside the wr_en=1 ",UVM_LOW)
           `uvm_info("SCB",$sformatf("got packet = %0d",wrt.wr_data),UVM_LOW)
+
       end
   endtask
 
